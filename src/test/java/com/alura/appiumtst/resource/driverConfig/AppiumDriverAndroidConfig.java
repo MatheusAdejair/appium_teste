@@ -1,4 +1,4 @@
-package com.alura.appiumtst.driverConfig;
+package com.alura.appiumtst.resource.driverConfig;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
@@ -9,21 +9,21 @@ import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class AppiumDriverConfig {
+public class AppiumDriverAndroidConfig {
 
     public final AppiumDriver driver;
-    private static AppiumDriverConfig _instance;
+    private static AppiumDriverAndroidConfig _instance;
 
-    public static AppiumDriverConfig Instance(){
+    public static AppiumDriverAndroidConfig Instance(){
 
-        if(AppiumDriverConfig._instance == null){
-            AppiumDriverConfig._instance = new AppiumDriverConfig();
+        if(AppiumDriverAndroidConfig._instance == null){
+            AppiumDriverAndroidConfig._instance = new AppiumDriverAndroidConfig();
         }
 
-        return AppiumDriverConfig._instance;
+        return AppiumDriverAndroidConfig._instance;
     }
 
-    private AppiumDriverConfig() {
+    private AppiumDriverAndroidConfig() {
         File apk = new File("src/main/resources/APKs/alura_esporte.apk");
         DesiredCapabilities configurations = new DesiredCapabilities();
         configurations.setCapability(MobileCapabilityType.APP, apk.getAbsolutePath());

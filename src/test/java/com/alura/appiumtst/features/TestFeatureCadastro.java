@@ -2,7 +2,8 @@ package com.alura.appiumtst.features;
 
 import com.alura.appiumtst.pageObjects.CadastroPageObject;
 import com.alura.appiumtst.pageObjects.LoginPageObject;
-import com.alura.appiumtst.driverConfig.AppiumDriverConfig;
+
+import com.alura.appiumtst.resource.driverConfig.AppiumDriverAndroidConfig;
 import io.appium.java_client.AppiumDriver;
 import org.junit.Assert;
 import org.junit.Test;
@@ -14,7 +15,7 @@ public class TestFeatureCadastro {
     @Test
     public void tstCadastrarSenhaNaoConfere() throws NoSuchElementException {
 
-        AppiumDriver driver = AppiumDriverConfig.Instance().driver;
+        AppiumDriver driver = AppiumDriverAndroidConfig.Instance().driver;
         LoginPageObject teleLogin = new LoginPageObject(driver);
 
         teleLogin.FindElements();
@@ -32,7 +33,7 @@ public class TestFeatureCadastro {
     @Test
     public void tstCadastrarSenhaValida() throws NoSuchElementException {
 
-        AppiumDriver driver = AppiumDriverConfig.Instance().driver;
+        AppiumDriver driver = AppiumDriverAndroidConfig.Instance().driver;
         LoginPageObject teleLogin = new LoginPageObject(driver);
 
         teleLogin.FindElements();

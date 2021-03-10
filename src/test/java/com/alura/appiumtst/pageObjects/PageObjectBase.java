@@ -11,4 +11,5 @@ public abstract class PageObjectBase {
     }
 
     public abstract void FindElements();
+
 }
