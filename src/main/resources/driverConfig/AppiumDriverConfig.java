@@ -1,4 +1,4 @@
-package com.alura.appiumtst.resource;
+package com.alura.appiumtst.driverConfig;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
@@ -24,7 +24,7 @@ public class AppiumDriverConfig {
     }
 
     private AppiumDriverConfig() {
-        File apk = new File("src/main/resources/alura_esporte.apk");
+        File apk = new File("src/main/resources/APKs/alura_esporte.apk");
         DesiredCapabilities configurations = new DesiredCapabilities();
         configurations.setCapability(MobileCapabilityType.APP, apk.getAbsolutePath());
         configurations.setCapability(MobileCapabilityType.PLATFORM_NAME, MobilePlatform.ANDROID);
